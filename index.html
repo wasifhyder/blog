@@ -1,71 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+---
+layout: default
+---
 
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Wasif Hyder</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+<div class="home">
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <h1 class="page-heading">Posts</h1>
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</head>
-<body>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <h2 style="margin-top: 5%">Ruminations</h2>
-      <h5>This is the blog of designer, developer <strong>Wasif Hyder</strong></h5>
-    </div>
-
-    <div class="row" stlye="margin-top:5%">
-      <div class="two columns">
-        <h4>Projects</h4>
-      </div>
-      <div class="four columns">
-        <h5>Image Visualization Toolkit</h5>
-        <p>So. Here's some info about my projects. This is project a</p>
-      </div>
-      <div class="four columns">
-        <h5>Project A</h5>
-        <p>So. Here's some info about my projects. This is project a</p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="two columns" style="text-indent:-9000px">
-        Hello
-      </div>
-      <div class="four columns">
-        <h5>Project A</h5>
-        <p>So. Here's some info about my projects. This is project a</p>
-      </div>
-      <div class="four columns">
-        <h5>Project A</h5>
-        <p>So. Here's some info about my projects. This is project a</p>
-      </div>
-    </div>
-  </div>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
-</html>
+</div>
