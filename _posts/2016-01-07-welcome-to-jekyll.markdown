@@ -14,6 +14,6 @@ Also, I can higlight code nicely. Here is a factorial code snippet:
 def factorial(n):
     if n < 1: return 1
     return n * factorial(n-1)
-# prints 'Hi, Tom' to STDOUT.
+# factorial(5) returns 120
 {% endhighlight %}
 
